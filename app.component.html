@@ -1,0 +1,26 @@
+<div class="container">
+  <!-- <app-header></app-header>
+  <app-home></app-home>
+  <app-footer></app-footer> -->
+  <div class="form-group mt-5">
+    <input type="text" class="form-control" placeholder="search item.." [(ngModel)]="item">
+  </div>
+  <table class="table ">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items | search:item" >
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td>Available</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
